@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title> Lab 8 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">   
+
+    <body>
+    <div class="login-box">
+    <img src="avatar.png" class="avatar">
+    
+</head>
+<body align="center">
+   <h1>PWA Demo of Static cache</h1><br>
+   <h1>Dynamic Cache</h1><br>
+   <span>Click on next and prev links and see the pages getting added in cache storage of the browser</span><br><br><br><br>
+
+   <a href="404.html">prev</a>&nbsp;
+   <a href="offline.html">next</a> 
+        
+	<script>
+            if('serviceWorker' in navigator){
+                navigator.serviceWorker.register('serviceWorker.js')
+                .then(registeration=>{
+                    console.log("Registered successfully");
+                })
+                .catch(err=>{
+                    console.log("Registration failed"+err);
+                })
+            }
+        </script>
+    
+    </body>
+</html>
